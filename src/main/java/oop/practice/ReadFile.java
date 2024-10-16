@@ -4,6 +4,9 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class ReadFile {
     private Universe starWars;
@@ -35,6 +38,14 @@ public class ReadFile {
     }
 
     public void writeData() throws IOException {
+
+        Path outputDirectory = Paths.get("src/resources/output");
+
+        // Check if the directory exists, and create it if it doesn't
+        if (Files.notExists(outputDirectory)) {
+            Files.createDirectories(outputDirectory);
+        }
+
         if (starWars != null) mapper.writeValue(new File("src/resources/output/starwars.json"), starWars);
         if (hitchhikers != null) mapper.writeValue(new File("src/resources/output/hitchhiker.json"), hitchhikers);
         if (rings != null) mapper.writeValue(new File("src/resources/output/rings.json"), rings);
