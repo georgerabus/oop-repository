@@ -13,3 +13,5 @@ target/
 *.ipr
 
 .vscode/
+
+**/output/

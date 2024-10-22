@@ -2,6 +2,8 @@ package oop.practice;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -13,12 +15,14 @@ public class ReadFile {
     private Universe hitchhikers;
     private Universe rings;
     private Universe marvel;
-    private JsonNode data;
-    private ObjectMapper mapper;
+    private final JsonNode data;
+    private final ObjectMapper mapper;
+    private final String ROOT = "src/main/resources";
 
     public ReadFile() throws IOException {
-        File inputFile = new File("src/resources/input.json");
+        File inputFile = new File(ROOT + "/input.json");
         this.mapper = new ObjectMapper();
+        this.mapper.enable(SerializationFeature.INDENT_OUTPUT);
         this.data = mapper.readTree(inputFile).get("input");
     }
 
@@ -39,16 +43,15 @@ public class ReadFile {
 
     public void writeData() throws IOException {
 
-        Path outputDirectory = Paths.get("src/resources/output");
+        Path outputDirectory = Paths.get(ROOT + "/output");
 
-        // Check if the directory exists, and create it if it doesn't
         if (Files.notExists(outputDirectory)) {
             Files.createDirectories(outputDirectory);
         }
 
-        if (starWars != null) mapper.writeValue(new File("src/resources/output/starwars.json"), starWars);
-        if (hitchhikers != null) mapper.writeValue(new File("src/resources/output/hitchhiker.json"), hitchhikers);
-        if (rings != null) mapper.writeValue(new File("src/resources/output/rings.json"), rings);
-        if (marvel != null) mapper.writeValue(new File("src/resources/output/marvel.json"), marvel);
+        if (starWars != null) mapper.writeValue(new File(ROOT + "/output/starwars.json"), starWars);
+        if (hitchhikers != null) mapper.writeValue(new File(ROOT + "/output/hitchhiker.json"), hitchhikers);
+        if (rings != null) mapper.writeValue(new File(ROOT + "/output/rings.json"), rings);
+        if (marvel != null) mapper.writeValue(new File(ROOT + "/output/marvel.json"), marvel);
     }
 }
