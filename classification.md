@@ -25,9 +25,9 @@
 - BULKY,
 - POINTY_EARS,
 
-# Classification by Universe
+# Classification by oop.practice.Universe
 
-## Star Wars Universe
+## Star Wars oop.practice.Universe
 (Wookie)
 
 ```
@@ -46,7 +46,7 @@ age: 0-60
 traits: SHORT, HAIRY
 ```
 
-## Marvel Universe
+## Marvel oop.practice.Universe
 (Asgardian)
 
 ```
@@ -56,7 +56,7 @@ age: 0-5000
 traits: BLONDE, TALL
 ```
 
-## Hitchhiker's Universe
+## Hitchhiker's oop.practice.Universe
 
 (Betelgeusian)
 ```

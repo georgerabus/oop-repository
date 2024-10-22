@@ -1,4 +1,5 @@
 package oop.practice;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import java.util.List;
 
@@ -13,5 +14,4 @@ public class Universe {
     public List<JsonNode> getIndividuals() {
         return individuals;
     }
-
 }

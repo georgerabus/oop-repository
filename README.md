@@ -12,7 +12,7 @@ The lab builds on the premise, but has some modified rules and background story,
 
 In a distant future, a software engineering intern has force pushed some untested code before the deadline to the multiverse codebase.
 
-This mishap by the intern has caused the merging and colliding of our Moldavian Universe with a few fictional ones.
+This mishap by the intern has caused the merging and colliding of our Moldavian oop.practice.Universe with a few fictional ones.
 
 Even though the locals remained, individuals from the foreign universes have suddenly appeared. The foreigners even though curious about the Moldovian culture, want to get back to their own universes.
 
@@ -30,11 +30,11 @@ Using the classification system, and an input file of all the registered individ
 
 - Book - The Hitchhicker's guide to the galaxy
 
-- Marvel Universe
+- Marvel oop.practice.Universe
 
-- Star Wars Universe
+- Star Wars oop.practice.Universe
 
-- Lord of the Rings Universe
+- Lord of the Rings oop.practice.Universe
 
 ## Technical
 
