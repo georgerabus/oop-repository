@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Category {
-    private Universe starWars = new Universe(new ArrayList<>());
-    private Universe hitchhikers = new Universe(new ArrayList<>());
-    private Universe marvel = new Universe(new ArrayList<>());
-    private Universe rings = new Universe(new ArrayList<>());
+    private static Universe starWars = new Universe("starWars", new ArrayList<>());
+    private static Universe hitchhikers = new Universe("hitchhikers", new ArrayList<>());
+    private static Universe marvel = new Universe("marvel", new ArrayList<>());
+    private static Universe rings = new Universe("rings", new ArrayList<>());
 
-    public Category(JsonNode data) {
+    public static ArrayList<Universe> classify(JsonNode data) {
         for (JsonNode entry : data) {
             boolean isHumanoid = entry.has("isHumanoid") && !entry.get("isHumanoid").isNull() && entry.get("isHumanoid").asBoolean();
             String planet = entry.has("planet") && !entry.get("planet").isNull() ? entry.get("planet").asText() : "unknown";
@@ -21,25 +21,48 @@ public class Category {
                 entry.get("traits").forEach(traitNode -> traits.add(traitNode.asText()));
             }
 
-            if (!isHumanoid && planet.equals("Kashyyyk") && age >= 0 && age <= 400 && traits.contains("HAIRY") && traits.contains("TALL")) {
+            if (!isHumanoid && (planet.equals("Kashyyyk") || traits.contains("HAIRY") && traits.contains("TALL") || age <= 400)) {
                 starWars.getIndividuals().add(entry);
-            } else if (!isHumanoid && planet.equals("Endor") && age >= 0 && age <= 60 && traits.contains("HAIRY") && traits.contains("SHORT")) {
+            } else if (!isHumanoid && (planet.equals("Endor") || traits.contains("HAIRY") && traits.contains("SHORT") || age <= 60)) {
                 starWars.getIndividuals().add(entry);
-            } else if (isHumanoid && planet.equals("Asgard") && age >= 0 && age <= 5000 && traits.contains("BLONDE") && traits.contains("TALL")) {
+            }
+            else if (isHumanoid && (planet.equals("Asgard") || traits.contains("BLONDE") && traits.contains("TALL") || age <= 5000)) {
                 marvel.getIndividuals().add(entry);
-            } else if (isHumanoid && planet.equals("Betelgeuse") && age >= 0 && age <= 100 && traits.contains("EXTRA_ARMS") && traits.contains("EXTRA_HEAD")) {
+            }
+            else if (isHumanoid && (planet.equals("Betelgeuse") || traits.contains("EXTRA_ARMS") && traits.contains("EXTRA_HEAD") || age <= 100)) {
                 hitchhikers.getIndividuals().add(entry);
-            } else if (!isHumanoid && planet.equals("Vogsphere") && age >= 0 && age <= 200 && traits.contains("GREEN") && traits.contains("BULKY")) {
+            } else if (!isHumanoid && (planet.equals("Vogsphere") || traits.contains("GREEN") && traits.contains("BULKY") || age <= 200)) {
                 hitchhikers.getIndividuals().add(entry);
-            } else if (isHumanoid && planet.equals("Earth") && traits.contains("BLONDE") && traits.contains("POINTY_EARS")) {
+            }
+            else if (isHumanoid && (planet.equals("Earth") || traits.contains("BLONDE") && traits.contains("POINTY_EARS") || traits.contains("SHORT") && traits.contains("BULKY") || age <= 200)) {
                 rings.getIndividuals().add(entry);
-            } else if (isHumanoid && planet.equals("Earth") && age >= 0 && age <= 200 && traits.contains("SHORT") && traits.contains("BULKY")) {
+            }
+            // If no strong match is found, assign to the most appropriate universe based on the traits available
+            else if (traits.contains("HAIRY") || traits.contains("TALL") || planet.equals("Kashyyyk") || planet.equals("Endor")) {
+                starWars.getIndividuals().add(entry);
+            } else if (traits.contains("BLONDE") || traits.contains("TALL") || planet.equals("Asgard")) {
+                marvel.getIndividuals().add(entry);
+            } else if (traits.contains("EXTRA_ARMS") || traits.contains("EXTRA_HEAD") || planet.equals("Betelgeuse")) {
+                hitchhikers.getIndividuals().add(entry);
+            } else if (traits.contains("GREEN") || traits.contains("BULKY") || planet.equals("Vogsphere")) {
+                hitchhikers.getIndividuals().add(entry);
+            } else if (traits.contains("BLONDE") || traits.contains("POINTY_EARS") || traits.contains("SHORT") || traits.contains("BULKY") || planet.equals("Earth")) {
                 rings.getIndividuals().add(entry);
-            } else {
-                System.out.println("Unknown classification for entry: " + entry.toPrettyString());
+            }
+            // Default to Star Wars if no clear match is found (or we could make a different default)
+            else {
+                starWars.getIndividuals().add(entry);
             }
         }
+
+        var array = new ArrayList<Universe>();
+        array.add(starWars);
+        array.add(marvel);
+        array.add(hitchhikers);
+        array.add(rings);
+        return array;
     }
+
 
     public Universe getStarWars() {
         return starWars;

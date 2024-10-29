@@ -7,11 +7,11 @@ import java.nio.file.Paths;
 public class Main {
 
     public static void main(String[] args) throws IOException {
+      String path = "/input.json";
       ReadFile readFile = new ReadFile();
-      JsonNode data = readFile.getData();
+      JsonNode data = ReadFile.getData(path);
 
-      Category category = new Category(data);
-      readFile.setUniverses(category.getStarWars(), category.getHitchhikers(), category.getRings(), category.getMarvel());
-      readFile.writeData();
+      var classifiedData = Category.classify(data);
+      readFile.writeData(classifiedData);
   }
 }
