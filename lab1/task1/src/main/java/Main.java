@@ -52,11 +52,13 @@ class Display {
     }
 }
 
+
+
 public class Main {
     public static void main(String[] args) {
-        Display display1 = new Display(1920, 1080, 401, "Display A");
-        Display display2 = new Display(2560, 1440, 326, "Display B");
-        Display display3 = new Display(3840, 2160, 458, "Display C");
+        Display display1 = new Display(1920, 1080, 401, "Full HD Samsung");
+        Display display2 = new Display(2560, 1440, 326, "2k Philips");
+        Display display3 = new Display(3840, 2160, 458, "QLED LG");
 
         display1.compareSize(display2);
         display2.compareSharpness(display3);
