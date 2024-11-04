@@ -4,12 +4,18 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+        <option value="$PROJECT_DIR$/lab2/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/lab1/task1/pom.xml" />
+        <option value="$PROJECT_DIR$/lab1/task4/pom.xml" />
+        <option value="$PROJECT_DIR$/lab1/pom.xml" />
+        <option value="$PROJECT_DIR$/lab0/lab0/pom.xml" />
         <option value="$PROJECT_DIR$/lab0/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/lab0/lab0/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </set>
     </option>
