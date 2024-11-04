@@ -27,15 +27,15 @@ class TextData {
         this.longestWord = findLongestWord(text);
     }
 
-    private int countVowels(String text) {
-        int count = 0;
-        for (char c : text.toLowerCase().toCharArray()) {
-            if ("aeiou".indexOf(c) != -1) {
-                count++;
+        private int countVowels(String text) {
+            int count = 0;
+            for (char c : text.toLowerCase().toCharArray()) {
+                if ("aeiou".indexOf(c) != -1) {
+                    count++;
+                }
             }
+            return count;
         }
-        return count;
-    }
 
     private int countConsonants(String text) {
         int count = 0;
@@ -73,6 +73,15 @@ class TextData {
         return longest;
     }
 
+    public void printValues(){
+        System.out.println("File Name: " + this.getFileName());
+        System.out.println("Number of Vowels: " + this.getNumberOfVowels());
+        System.out.println("Number of Consonants: " + this.getNumberOfConsonants());
+        System.out.println("Number of Letters: " + this.getNumberOfLetters());
+        System.out.println("Number of Sentences: " + this.getNumberOfSentences());
+        System.out.println("Longest Word: " + this.getLongestWord());
+    }
+
     public String getFileName() {
         return fileName;
     }
@@ -104,20 +113,13 @@ public class Main {
             System.out.println("Please provide the path to the .txt file.");
             return;
         }
-
         String filePath = args[0];
         FileReader fileReader = new FileReader();
 
         try {
             String text = fileReader.readFileIntoString(filePath);
             TextData textData = new TextData(text, filePath);
-
-            System.out.println("File Name: " + textData.getFileName());
-            System.out.println("Number of Vowels: " + textData.getNumberOfVowels());
-            System.out.println("Number of Consonants: " + textData.getNumberOfConsonants());
-            System.out.println("Number of Letters: " + textData.getNumberOfLetters());
-            System.out.println("Number of Sentences: " + textData.getNumberOfSentences());
-            System.out.println("Longest Word: " + textData.getLongestWord());
+            textData.printValues();
 
         } catch (IOException e) {
             System.out.println("An error occurred while reading the file: " + e.getMessage());
