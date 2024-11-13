@@ -48,6 +48,13 @@ class Americano extends Coffee {
     public void printCoffeeDetails() {
         System.out.println(coffeeName + " water: " + mlOfWater + " ml");
     }
+
+    public final Americano makeAmericano() {
+        System.out.println("Making " + coffeeName);
+        System.out.println("Intensity set to " + coffeeIntensity);
+        System.out.println("Adding " + mlOfWater + " mls of water");
+        return this;
+    }
 }
 
 class Cappuccino extends Americano {
@@ -71,11 +78,18 @@ class Cappuccino extends Americano {
     public void printCoffeeDetails() {
         System.out.println(coffeeName + " water: " + getMlOfWater() + " ml, milk: " + mlOfMilk + " mg");
     }
+
+    public final Cappuccino makeCappuccino() {
+        System.out.println("Making " + coffeeName);
+        System.out.println("Intensity set to " + coffeeIntensity);
+        System.out.println("Adding " + mlOfMilk + " mls of milk");
+        return this;
+    }
 }
 
 class SyrupCappuccino extends Cappuccino {
     private SyrupType syrup;
-    private final String coffeeName = "SyrupCappuccino";
+    private final String coffeeName = "Syrup Cappuccino";
 
     public SyrupCappuccino(Intensity intensity, int mlOfWater, int mlOfMilk, SyrupType syrup) {
         super(intensity, mlOfWater, mlOfMilk);
@@ -94,11 +108,19 @@ class SyrupCappuccino extends Cappuccino {
     public void printCoffeeDetails() {
         System.out.println(coffeeName + " water: " + getMlOfWater() + " ml, milk: " + getMlOfMilk() + " mg, syrup: " + syrup);
     }
+
+    public final SyrupCappuccino makeSyrupCappuccino() {
+        System.out.println("Making " + coffeeName);
+        System.out.println("Intensity set to " + coffeeIntensity);
+        System.out.println("Adding " + getMlOfMilk() + " mls of milk");
+        System.out.println("Adding syrup: " + syrup);
+        return this;
+    }
 }
 
 class PumpkinSpiceLatte extends SyrupCappuccino {
     private int mgOfPumpkinSpice;
-    private final String coffeeName = "PumpkinSpiceLatte";
+    private final String coffeeName = "Pumpkin Spice Latte";
 
     public PumpkinSpiceLatte(Intensity intensity, int mlOfWater, int mlOfMilk, SyrupType syrup, int mgOfPumpkinSpice) {
         super(intensity, mlOfWater, mlOfMilk, syrup);
@@ -117,11 +139,19 @@ class PumpkinSpiceLatte extends SyrupCappuccino {
     public void printCoffeeDetails() {
         System.out.println(coffeeName + " water: " + getMlOfWater() + " ml, milk: " + getMlOfMilk() + " mg, syrup: " + getSyrup() + ", pumpkin spice: " + mgOfPumpkinSpice + " mg");
     }
+
+    public final PumpkinSpiceLatte makePumpkinSpiceLatte() {
+        System.out.println("Making " + coffeeName);
+         System.out.println("Intensity set to " + coffeeIntensity);
+        System.out.println("Adding " + getMlOfMilk() + " mls of milk");
+        System.out.println("Adding " + mgOfPumpkinSpice + " mls of pumpkin spice");
+        return this;
+    }
 }
 
 public class Main {
     public static void main(String[] args) {
-        PumpkinSpiceLatte coffee = new PumpkinSpiceLatte(Intensity.NORMAL, 50, 20, SyrupType.CHOCOLATE, 3);
-        coffee.printCoffeeDetails();
+        PumpkinSpiceLatte coffee = new PumpkinSpiceLatte(Intensity.NORMAL, 50, 100, SyrupType.CHOCOLATE, 50);
+        coffee.makePumpkinSpiceLatte();
     }
 }
