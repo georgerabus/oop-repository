@@ -22,10 +22,17 @@ public class Cappuccino extends Americano {
         System.out.println(coffeeName + " water: " + getMlOfWater() + " ml, milk: " + mlOfMilk + " mg");
     }
 
-    public final Cappuccino makeCappuccino() {
-        System.out.println("Making " + coffeeName);
+    // base method
+    public void makeRecipe() {
         System.out.println("Intensity set to " + coffeeIntensity);
         System.out.println("Adding " + mlOfMilk + " mls of milk");
+    }
+
+
+    // specialized method
+    public final Cappuccino makeCappuccino() {
+        System.out.println("Making " + coffeeName);
+        this.makeRecipe();
         return this;
     }
 }

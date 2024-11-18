@@ -22,11 +22,15 @@ public class PumpkinSpiceLatte extends SyrupCappuccino {
         System.out.println(coffeeName + " water: " + getMlOfWater() + " ml, milk: " + getMlOfMilk() + " mg, syrup: " + getSyrup() + ", pumpkin spice: " + mgOfPumpkinSpice + " mg");
     }
 
+    @Override
+    public void makeRecipe() {
+        super.makeRecipe();
+        System.out.println("Adding " + mgOfPumpkinSpice + " mls of pumpkin spice");
+    }
+
     public final PumpkinSpiceLatte makePumpkinSpiceLatte() {
         System.out.println("Making " + coffeeName);
-        System.out.println("Intensity set to " + coffeeIntensity);
-        System.out.println("Adding " + getMlOfMilk() + " mls of milk");
-        System.out.println("Adding " + mgOfPumpkinSpice + " mls of pumpkin spice");
+        this.makeRecipe();
         return this;
     }
 }

@@ -22,11 +22,15 @@ public class SyrupCappuccino extends Cappuccino {
         System.out.println(coffeeName + " water: " + getMlOfWater() + " ml, milk: " + getMlOfMilk() + " mg, syrup: " + syrup);
     }
 
+    @Override
+    public void makeRecipe() {
+        super.makeRecipe();
+        System.out.println("Adding syrup: " + syrup);
+    }
+
     public final SyrupCappuccino makeSyrupCappuccino() {
         System.out.println("Making " + coffeeName);
-        System.out.println("Intensity set to " + coffeeIntensity);
-        System.out.println("Adding " + getMlOfMilk() + " mls of milk");
-        System.out.println("Adding syrup: " + syrup);
+        this.makeRecipe();
         return this;
     }
 }
