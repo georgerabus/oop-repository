@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="project structure fixed">
-      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/CarType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/PassangerType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/PassengerType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/oop-repository.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/oop-repository.iml" afterDir="false" />
+    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="basic project structure">
+      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/ArrayQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/CarServiceLab.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/Queue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +95,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730761303251</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="basic project structure">
+      <option name="closed" value="true" />
+      <created>1733899884277</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733899884277</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,6 +119,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project structure fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="project structure fixed" />
+    <MESSAGE value="basic project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic project structure" />
   </component>
 </project>
