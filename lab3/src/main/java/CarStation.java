@@ -1,9 +1,8 @@
-import java.util.ArrayList;
 import java.util.List;
 
-public class temp {
+public class CarStation {
     public static void main(String[] args){
-        Queue<Integer> queue = new LinearQueue<>(5);
+        Queue<Integer> queue = new CircularQueue<>(5);
         List<Integer> numbers = List.of(1, 2, 3, 4, 5);
 
         for (int number : numbers) {

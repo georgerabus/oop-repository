@@ -1,6 +1,6 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
+!**/src/CarStation/**/target/
 !**/src/test/**/target/
 
 ### IntelliJ IDEA ###
@@ -20,10 +20,10 @@ target/
 /nbdist/
 /.nb-gradle/
 build/
-!**/src/main/**/build/
+!**/src/CarStation/**/build/
 !**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
 
-src/main/resources/output/*
+src/CarStation/resources/output/*

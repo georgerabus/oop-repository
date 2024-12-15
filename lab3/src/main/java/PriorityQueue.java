@@ -1,4 +1,7 @@
-public class DoubleQueue<T> implements Queue<T> {
+public class PriorityQueue<T> implements Queue<T> {
+
+
+
     @Override
     public void enqueue(T item) {
 
