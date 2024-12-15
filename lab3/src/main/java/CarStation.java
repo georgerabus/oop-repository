@@ -2,19 +2,23 @@ import java.util.List;
 
 public class CarStation {
     public static void main(String[] args){
-        Queue<Integer> queue = new CircularQueue<>(5);
-        List<Integer> numbers = List.of(1, 2, 3, 4, 5);
+        Queue<testObj> queue = new PriorityQueue<>(7, new ObjectComparator());
+        List<testObj> numbers = List.of(
+                new testObj("Gas", "People"),
+                new testObj("Electric", "Robots"),
+                new testObj("Electric", "Robots"),
+                new testObj("Electric", "People"),
+                new testObj("Gas", "People"),
+                new testObj("Gas", "Robots"),
+                new testObj("Gas", "People")
+                );
 
-        for (int number : numbers) {
+        for (testObj number : numbers) {
             queue.enqueue(number);
         }
 
-        System.out.println(queue.peek());
-        queue.dequeue();
-        System.out.println(queue.peek());
-        queue.dequeue();
-        queue.dequeue();
-        System.out.println(queue.peek());
-
+        while (!queue.isEmpty()) {
+            System.out.println(queue.dequeue());
+        }
     }
 }
