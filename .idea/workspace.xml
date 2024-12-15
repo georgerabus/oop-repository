@@ -4,14 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="project structure fixed">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="circular queue done">
+      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/ObjectComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/testObj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/CarStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/CarStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/PriorityQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/PriorityQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -38,15 +49,22 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2oD6e4PHwBgHy4gCgEHFplABsUt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.CarStation.executor": "Run",
+    "Application.main.executor": "Run",
+    "Application.temp.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "oop-advanced-tasks",
+    "git-widget-placeholder": "oop-master-tasks",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/george/univer/oop-repository",
     "project.structure.last.edited": "Modules",
@@ -60,8 +78,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="oop-repository" />
+    <configuration name="CarStation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CarStation" />
+      <module name="lab3" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -73,6 +92,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CarStation" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -91,7 +115,63 @@
       <option name="project" value="LOCAL" />
       <updated>1730761303251</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="basic project structure">
+      <option name="closed" value="true" />
+      <created>1733899884277</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733899884277</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added CarServiceLab">
+      <option name="closed" value="true" />
+      <created>1733904843684</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733904843684</updated>
+    </task>
+    <task id="LOCAL-00004" summary="reverted some files">
+      <option name="closed" value="true" />
+      <created>1734101099489</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734101099489</updated>
+    </task>
+    <task id="LOCAL-00005" summary="queue interface">
+      <option name="closed" value="true" />
+      <created>1734268999313</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1734268999313</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added 3 classes that implements the queue interface">
+      <option name="closed" value="true" />
+      <created>1734269388456</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1734269388456</updated>
+    </task>
+    <task id="LOCAL-00007" summary="testing the linearqueue implementation">
+      <option name="closed" value="true" />
+      <created>1734272876198</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1734272876198</updated>
+    </task>
+    <task id="LOCAL-00008" summary="circular queue done">
+      <option name="closed" value="true" />
+      <created>1734277746729</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1734277746729</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -107,6 +187,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project structure fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="project structure fixed" />
+    <MESSAGE value="basic project structure" />
+    <MESSAGE value="added CarServiceLab" />
+    <MESSAGE value="reverted some files" />
+    <MESSAGE value="queue interface" />
+    <MESSAGE value="added 3 classes that implements the queue interface" />
+    <MESSAGE value="testing the linearqueue implementation" />
+    <MESSAGE value="circular queue done" />
+    <option name="LAST_COMMIT_MESSAGE" value="circular queue done" />
   </component>
 </project>
