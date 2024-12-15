@@ -1,37 +1,51 @@
+import java.util.NoSuchElementException;
+
 public class LinearQueue<T> implements Queue<T>{
 
-    @Override
-    public void enqueue(T element) {
+    private int front, rear, size;
+    private T[] nums;
 
+    public LinearQueue(int size){
+        this.front = this.rear = -1;
+        this.size = size;
+        this.nums = (T[]) new Object[size];
+    }
+
+    @Override
+    public void enqueue(T item) {
+        if (isFull())
+            throw new IllegalStateException();
+        if (isEmpty())
+            front++;
+        nums[++rear] = item;
     }
 
     @Override
     public T dequeue() {
-        return null;
+        if (isEmpty())
+            throw new NoSuchElementException();
+        T temp = nums[front];
+        if (front == rear)
+            front = rear = -1;
+        else
+            front++;
+        return temp;
     }
 
     @Override
     public T peek() {
-        return null;
+        if (isEmpty())
+            throw new NoSuchElementException();
+        return nums[front];
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return front == -1;
     }
 
     @Override
     public boolean isFull() {
-        return false;
-    }
-
-    @Override
-    public int size() {
-        return 0;
-    }
-
-    @Override
-    public void display() {
-
+        return rear == nums.length -1;
     }
 }

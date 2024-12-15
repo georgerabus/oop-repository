@@ -1,6 +1,6 @@
 public class CircularQueue<T> implements Queue<T>{
     @Override
-    public void enqueue(T element) {
+    public void enqueue(T item) {
 
     }
 
@@ -22,15 +22,5 @@ public class CircularQueue<T> implements Queue<T>{
     @Override
     public boolean isFull() {
         return false;
-    }
-
-    @Override
-    public int size() {
-        return 0;
-    }
-
-    @Override
-    public void display() {
-
     }
 }

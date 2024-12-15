@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="queue interface">
-      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/LinearQueue.java" afterDir="false" />
+    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="added 3 classes that implements the queue interface">
+      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/temp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/CircularQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/CircularQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/DoubleQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/DoubleQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/LinearQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/LinearQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab3/src/main/java/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/Queue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +60,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.main.executor": "Run",
+    "Application.temp.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -73,6 +78,13 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="temp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="temp" />
+      <module name="lab3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="oop-repository" />
       <option name="filePath" />
@@ -80,6 +92,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.temp" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -130,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734268999313</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added 3 classes that implements the queue interface">
+      <option name="closed" value="true" />
+      <created>1734269388456</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1734269388456</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,6 +175,7 @@
     <MESSAGE value="added CarServiceLab" />
     <MESSAGE value="reverted some files" />
     <MESSAGE value="queue interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="queue interface" />
+    <MESSAGE value="added 3 classes that implements the queue interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="added 3 classes that implements the queue interface" />
   </component>
 </project>
