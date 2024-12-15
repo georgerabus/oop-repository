@@ -16,7 +16,7 @@ public class testObj {
         return fuel;
     }
 
-
+    @Override
     public String toString() {
         return "testObj {dining = '" + dining + "', fuel ='" + fuel + "'}";
     }
