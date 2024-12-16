@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="task 1 done">
-      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/Dineable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/Refuelable.java" afterDir="false" />
+    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="task 1 enhanced + interfaces">
+      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/ElectricStation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/GasStation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/PeopleDinner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/RobotsDinnner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/CarStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/CarStation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/ObjectComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/ObjectComparator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -187,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734289128565</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="task 1 enhanced + interfaces">
+      <option name="closed" value="true" />
+      <created>1734376210171</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734376210171</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,6 +220,7 @@
     <MESSAGE value="circular queue done" />
     <MESSAGE value="Implemented priority queue, added testObj for testing them according to its attributes." />
     <MESSAGE value="task 1 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="task 1 done" />
+    <MESSAGE value="task 1 enhanced + interfaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="task 1 enhanced + interfaces" />
   </component>
 </project>
