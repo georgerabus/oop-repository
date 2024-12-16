@@ -2,7 +2,10 @@ import java.util.List;
 
 public class CarStation {
     public static void main(String[] args){
-        Queue<testObj> queue = new PriorityQueue<>(7, new ObjectComparator());
+        String priorityFuel = "Gas";
+        String priorityDining = "People";
+
+        Queue<testObj> queue = new PriorityQueue<>(7, new ObjectComparator(priorityFuel, priorityDining));
         List<testObj> numbers = List.of(
                 new testObj("Gas", "People"),
                 new testObj("Electric", "Robots"),

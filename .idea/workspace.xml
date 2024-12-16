@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="circular queue done">
-      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/ObjectComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/testObj.java" afterDir="false" />
+    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="task 1 done">
+      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/Dineable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/Refuelable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab3/src/main/java/CarStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/CarStation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/PriorityQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/PriorityQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/ObjectComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/ObjectComparator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -56,22 +56,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CarStation.executor": "Run",
-    "Application.main.executor": "Run",
-    "Application.temp.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "oop-master-tasks",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/george/univer/oop-repository",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CarStation.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.temp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;oop-master-tasks&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/george/univer/oop-repository&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -171,7 +171,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734277746729</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implemented priority queue, added testObj for testing them according to its attributes.">
+      <option name="closed" value="true" />
+      <created>1734288979674</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1734288979674</updated>
+    </task>
+    <task id="LOCAL-00010" summary="task 1 done">
+      <option name="closed" value="true" />
+      <created>1734289128565</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734289128565</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,6 +210,8 @@
     <MESSAGE value="added 3 classes that implements the queue interface" />
     <MESSAGE value="testing the linearqueue implementation" />
     <MESSAGE value="circular queue done" />
-    <option name="LAST_COMMIT_MESSAGE" value="circular queue done" />
+    <MESSAGE value="Implemented priority queue, added testObj for testing them according to its attributes." />
+    <MESSAGE value="task 1 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="task 1 done" />
   </component>
 </project>
