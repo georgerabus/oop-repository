@@ -1,7 +1,7 @@
 import java.util.List;
 public class CarStation {
     public static void main(String[] args){
-        String priorityFuel = "Gas";
+        String priorityFuel = "Electric";
         String priorityDining = "People";
 
         Queue<testObj> queue = new PriorityQueue<>(7, new ObjectComparator(priorityFuel, priorityDining));
@@ -19,8 +19,18 @@ public class CarStation {
             queue.enqueue(number);
         }
 
-        GasStation station = new GasStation();
-        station.refuel("1");
+        Refuelable gasstation = new GasStation();
+        Refuelable electricstation = new GasStation();
+        Dineable peopledinner = new PeopleDinner();
+        Dineable rpbptsdinner = new PeopleDinner();
+
+        gasstation.refuel("1");
+        peopledinner.serveDinner("1", "no");
+        peopledinner.serveDinner("2", "yes");
+        peopledinner.serveDinner("3", "no");
+        peopledinner.serveDinner("4", "yes");
+
+
 
         while (!queue.isEmpty()) {
             System.out.println(queue.dequeue());

@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="task 1 enhanced + interfaces">
-      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/ElectricStation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/GasStation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/PeopleDinner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/RobotsDinnner.java" afterDir="false" />
+    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="small changes to testObj to get new attributes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/CarStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/CarStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/Dineable.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/Dineable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/ElectricStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/ElectricStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/GasStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/GasStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/PeopleDinner.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/PeopleDinner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/RobotsDinnner.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/RobotsDinner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/testObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/testObj.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +198,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734376210171</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added classes with dineable and refuelable interfaces">
+      <option name="closed" value="true" />
+      <created>1734382623708</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1734382623709</updated>
+    </task>
+    <task id="LOCAL-00013" summary="small changes to testObj to get new attributes">
+      <option name="closed" value="true" />
+      <created>1734384090562</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1734384090562</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,6 +240,8 @@
     <MESSAGE value="Implemented priority queue, added testObj for testing them according to its attributes." />
     <MESSAGE value="task 1 done" />
     <MESSAGE value="task 1 enhanced + interfaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="task 1 enhanced + interfaces" />
+    <MESSAGE value="added classes with dineable and refuelable interfaces" />
+    <MESSAGE value="small changes to testObj to get new attributes" />
+    <option name="LAST_COMMIT_MESSAGE" value="small changes to testObj to get new attributes" />
   </component>
 </project>

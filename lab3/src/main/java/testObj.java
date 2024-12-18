@@ -5,7 +5,7 @@ public class testObj {
     private int id;
     private String does_dine;
 
-    public testObj(int id, String dining, String fuel, String does_dine) {
+    public testObj(int id, String fuel, String dining, String does_dine) {
         this.dining = dining;
         this.fuel = fuel;
         this.id = id;
@@ -26,6 +26,6 @@ public class testObj {
 
     @Override
     public String toString() {
-        return "testObj {id = " + id + ", dining = '" + dining + "', fuel = '" + fuel + "', wants to dine = '" + does_dine + "'}";
+        return "testObj {id = " + id + ", fuel = '" + fuel + "', dining = '" + dining + "', wish to dine = '" + does_dine + "'}";
     }
 }
