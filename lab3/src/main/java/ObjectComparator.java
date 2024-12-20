@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-public class ObjectComparator implements Comparator<testObj> {
+public class ObjectComparator implements Comparator<Car> {
     private final String priorityFuel;
     private final String priorityDining;
 
@@ -11,7 +11,7 @@ public class ObjectComparator implements Comparator<testObj> {
     }
 
     @Override
-    public int compare(testObj o1, testObj o2) {
+    public int compare(Car o1, Car o2) {
         boolean o1Priority = o1.getFuel().equals(priorityFuel) && o1.getDining().equals(priorityDining);
         boolean o2Priority = o2.getFuel().equals(priorityFuel) && o2.getDining().equals(priorityDining);
 

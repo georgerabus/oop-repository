@@ -1,39 +1,51 @@
-import java.util.List;
 public class CarStation {
-    public static void main(String[] args){
-        String priorityFuel = "Electric";
-        String priorityDining = "People";
+    private final Queue<Car> queue;
+    private final Dineable peopleDinner;
+    private final Dineable robotsDinner;
+    private final Refuelable gasStation;
+    private final Refuelable electricStation;
 
-        Queue<testObj> queue = new PriorityQueue<>(7, new ObjectComparator(priorityFuel, priorityDining));
-        List<testObj> numbers = List.of(
-                new testObj(1,"Gas", "People", "yes"),
-                new testObj(2,"Electric", "Robots", "no"),
-                new testObj(3, "Electric", "Robots", "yes"),
-                new testObj(4,"Electric", "People","no" ),
-                new testObj(5, "Gas", "People", "no"),
-                new testObj(6, "Gas", "Robots", "no"),
-                new testObj(7,"Gas", "People", "yes")
-                );
+    public CarStation(Queue<Car> queue) {
+        this.queue = queue;
+        this.peopleDinner = new PeopleDinner();
+        this.robotsDinner = new RobotsDinner();
+        this.gasStation = new GasStation();
+        this.electricStation = new ElectricStation();
+    }
 
-        for (testObj number : numbers) {
-            queue.enqueue(number);
-        }
-
-        Refuelable gasstation = new GasStation();
-        Refuelable electricstation = new GasStation();
-        Dineable peopledinner = new PeopleDinner();
-        Dineable rpbptsdinner = new PeopleDinner();
-
-        gasstation.refuel("1");
-        peopledinner.serveDinner("1", "no");
-        peopledinner.serveDinner("2", "yes");
-        peopledinner.serveDinner("3", "no");
-        peopledinner.serveDinner("4", "yes");
-
-
+    public void serveCars() {
 
         while (!queue.isEmpty()) {
-            System.out.println(queue.dequeue());
+            Car car = queue.peek();
+            if(car.getNeedsDining().equals("yes")){
+                if (car.getDining().equals("People")){
+                    peopleDinner.serveDinner(String.valueOf(car.getId()));
+                } else {
+                    robotsDinner.serveDinner(String.valueOf(car.getId()));
+                }
+            } else {
+                System.out.println("Car " + car.getId() + " Didn't get served");
+            }
+
+            if (car.getFuel().equals("Gas")){
+                gasStation.refuel(String.valueOf(car.getId()));
+            } else {
+                electricStation.refuel(String.valueOf(car.getId()));
+            }
+            queue.dequeue();
         }
+        System.out.println("All cars have been served.");
+
+        // Statistics
+        System.out.println("Statistics:");
+        System.out.println("Cars that received People Dinner: " + PeopleDinner.getCount());
+        System.out.println("Cars that received Robots Dinner: " + RobotsDinner.getCount());
+        System.out.println("Cars refueled with Gas: " + GasStation.getCount());
+        System.out.println("Cars recharged with Electricity: " + ElectricStation.getCount());
+    }
+
+    public void addCar(Car car) {
+        queue.enqueue(car);
+        System.out.println("Car added to queue: " + car);
     }
 }

@@ -1,15 +1,15 @@
-public class testObj {
+public class Car {
 
     private String fuel;
     private String dining;
     private int id;
-    private String does_dine;
+    private String needsDining;
 
-    public testObj(int id, String fuel, String dining, String does_dine) {
+    public Car(int id, String fuel, String dining, String needsDining) {
         this.dining = dining;
         this.fuel = fuel;
         this.id = id;
-        this.does_dine = does_dine;
+        this.needsDining = needsDining;
     }
 
     public String getDining() {
@@ -22,10 +22,10 @@ public class testObj {
 
     public int getId() {return id;}
 
-    public String getDoes_dine() {return does_dine;}
+    public String getNeedsDining() {return needsDining;}
 
     @Override
     public String toString() {
-        return "testObj {id = " + id + ", fuel = '" + fuel + "', dining = '" + dining + "', wish to dine = '" + does_dine + "'}";
+        return "Car {id = " + id + ", fuel = '" + fuel + "', dining = '" + dining + "', wish to dine = '" + needsDining + "'}";
     }
 }

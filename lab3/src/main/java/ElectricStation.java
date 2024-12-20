@@ -4,8 +4,11 @@ public class ElectricStation implements Refuelable{
     @Override
     public void refuel(String carId) {
         rechargeCount++;
-        System.out.println("Refueling electric car " + carId + ".");
+        System.out.println("Recharging electric car " + carId + ".");
         System.out.println("Total cars recharged: " + rechargeCount);
+    }
 
+    public static int getCount() {
+        return rechargeCount;
     }
 }
