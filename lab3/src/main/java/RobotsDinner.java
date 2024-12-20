@@ -7,6 +7,7 @@ public class RobotsDinner implements Dineable{
         System.out.println("Serving dinner to robots in car " + carId + ".");
         System.out.println("Total robots served: " + robotsServed);
     }
+
     public static int getCount() {
         return robotsServed;
     }

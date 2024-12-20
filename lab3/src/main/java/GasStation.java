@@ -8,6 +8,7 @@ public class GasStation implements Refuelable {
         System.out.println("Refueling gas car " + carId + ".");
         System.out.println("Total cars refueled: " + refuelCount);
     }
+
     public static int getCount() {
         return refuelCount;
     }

@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="task 2">
-      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/Play.java" afterDir="false" />
+    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="task 3 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab0/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/lab0/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab3/src/main/java/CarStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/CarStation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/Dineable.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/Dineable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab3/src/main/java/ElectricStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/ElectricStation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab3/src/main/java/GasStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/GasStation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/ObjectComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/ObjectComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/PeopleDinner.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/PeopleDinner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/Play.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/Play.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab3/src/main/java/RobotsDinner.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/RobotsDinner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/testObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/Car.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734561825600</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="task 3 done">
+      <option name="closed" value="true" />
+      <created>1734693553121</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1734693553121</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,6 +258,7 @@
     <MESSAGE value="added classes with dineable and refuelable interfaces" />
     <MESSAGE value="small changes to testObj to get new attributes" />
     <MESSAGE value="task 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="task 2" />
+    <MESSAGE value="task 3 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="task 3 done" />
   </component>
 </project>

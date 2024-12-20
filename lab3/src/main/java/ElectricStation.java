@@ -7,7 +7,6 @@ public class ElectricStation implements Refuelable{
         System.out.println("Recharging electric car " + carId + ".");
         System.out.println("Total cars recharged: " + rechargeCount);
     }
-
     public static int getCount() {
         return rechargeCount;
     }
