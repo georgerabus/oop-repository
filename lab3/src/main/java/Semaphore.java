@@ -64,7 +64,7 @@ public class Semaphore {
                     gasConsumption += carObj.getConsumption();
                 }
 
-                // passengers types calculation
+                // passengers types count calculation
                 if (carObj.getPassengers().equals("PEOPLE")) {
                     peoplePassengers++;
                 } else if (carObj.getPassengers().equals("ROBOTS")) {

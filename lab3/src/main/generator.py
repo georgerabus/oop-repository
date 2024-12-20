@@ -5,8 +5,8 @@ import time
 import shutil
 
 # Constants, change something here, the whole program changes:)
-OUTPUT_DIR = "queue"
-NR_OF_GENERATIONS = 5  # TODO change back to 30
+OUTPUT_DIR = "lab3/src/main/queue"
+NR_OF_GENERATIONS = 30  # TODO change back to 30
 MIN_WAIT = 500  # in ms
 MAX_WAIT = 3000  # in ms
 SECOND = 1000.0
