@@ -1,31 +1,61 @@
 public class Car {
-
-    private String fuel;
-    private String dining;
     private int id;
-    private String needsDining;
+    private String type;
+    private String passengers;
+    private boolean isDining;
+    private int consumption;
 
-    public Car(int id, String fuel, String dining, String needsDining) {
-        this.dining = dining;
-        this.fuel = fuel;
+    public Car() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
-        this.needsDining = needsDining;
     }
 
-    public String getDining() {
-        return dining;
+    public String getType() {
+        return type;
     }
 
-    public String getFuel() {
-        return fuel;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public int getId() {return id;}
+    public String getPassengers() {
+        return passengers;
+    }
 
-    public String getNeedsDining() {return needsDining;}
+    public void setPassengers(String passengers) {
+        this.passengers = passengers;
+    }
+
+    public boolean isDining() {
+        return isDining;
+    }
+
+    public void setIsDining(boolean isDining) {
+        this.isDining = isDining;
+    }
+
+    public int getConsumption() {
+        return consumption;
+    }
+
+    public void setConsumption(int consumption) {
+        this.consumption = consumption;
+    }
 
     @Override
     public String toString() {
-        return "Car {id = " + id + ", fuel = '" + fuel + "', dining = '" + dining + "', wish to dine = '" + needsDining + "'}";
+        return "Car{" +
+                "id=" + id +
+                ", type='" + type + '\'' +
+                ", passengers='" + passengers + '\'' +
+                ", isDining=" + isDining +
+                ", consumption=" + consumption +
+                '}';
     }
 }
