@@ -1,6 +1,6 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
+!**/src/Play/**/target/
 !**/src/test/**/target/
 
 ### IntelliJ IDEA ###
@@ -20,10 +20,10 @@ target/
 /nbdist/
 /.nb-gradle/
 build/
-!**/src/main/**/build/
+!**/src/Play/**/build/
 !**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
 
-src/main/resources/output/*
+src/Play/resources/output/*

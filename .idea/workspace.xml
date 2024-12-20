@@ -4,14 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="project structure fixed">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="task 5 (scheduler kind of broken)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/Play.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/Play.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/Scheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/Scheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/Semaphore.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/Semaphore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -38,15 +48,23 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2oD6e4PHwBgHy4gCgEHFplABsUt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.CarStation.executor": "Run",
+    "Application.Play.executor": "Run",
+    "Application.main.executor": "Run",
+    "Application.temp.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "oop-advanced-tasks",
+    "git-widget-placeholder": "oop-master-tasks",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/george/univer/oop-repository",
     "project.structure.last.edited": "Modules",
@@ -60,8 +78,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="oop-repository" />
+    <configuration name="Play" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Play" />
+      <module name="lab3" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -73,6 +92,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Play" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -91,7 +115,143 @@
       <option name="project" value="LOCAL" />
       <updated>1730761303251</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="basic project structure">
+      <option name="closed" value="true" />
+      <created>1733899884277</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733899884277</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added CarServiceLab">
+      <option name="closed" value="true" />
+      <created>1733904843684</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733904843684</updated>
+    </task>
+    <task id="LOCAL-00004" summary="reverted some files">
+      <option name="closed" value="true" />
+      <created>1734101099489</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734101099489</updated>
+    </task>
+    <task id="LOCAL-00005" summary="queue interface">
+      <option name="closed" value="true" />
+      <created>1734268999313</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1734268999313</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added 3 classes that implements the queue interface">
+      <option name="closed" value="true" />
+      <created>1734269388456</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1734269388456</updated>
+    </task>
+    <task id="LOCAL-00007" summary="testing the linearqueue implementation">
+      <option name="closed" value="true" />
+      <created>1734272876198</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1734272876198</updated>
+    </task>
+    <task id="LOCAL-00008" summary="circular queue done">
+      <option name="closed" value="true" />
+      <created>1734277746729</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1734277746729</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Implemented priority queue, added testObj for testing them according to its attributes.">
+      <option name="closed" value="true" />
+      <created>1734288979674</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1734288979674</updated>
+    </task>
+    <task id="LOCAL-00010" summary="task 1 done">
+      <option name="closed" value="true" />
+      <created>1734289128565</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734289128565</updated>
+    </task>
+    <task id="LOCAL-00011" summary="task 1 enhanced + interfaces">
+      <option name="closed" value="true" />
+      <created>1734376210171</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734376210171</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added classes with dineable and refuelable interfaces">
+      <option name="closed" value="true" />
+      <created>1734382623708</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1734382623709</updated>
+    </task>
+    <task id="LOCAL-00013" summary="small changes to testObj to get new attributes">
+      <option name="closed" value="true" />
+      <created>1734384090562</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1734384090562</updated>
+    </task>
+    <task id="LOCAL-00014" summary="task 2">
+      <option name="closed" value="true" />
+      <created>1734561825600</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1734561825600</updated>
+    </task>
+    <task id="LOCAL-00015" summary="task 3 done">
+      <option name="closed" value="true" />
+      <created>1734693553121</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1734693553121</updated>
+    </task>
+    <task id="LOCAL-00016" summary="refactored class logic">
+      <option name="closed" value="true" />
+      <created>1734700484234</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1734700484234</updated>
+    </task>
+    <task id="LOCAL-00017" summary="task 4">
+      <option name="closed" value="true" />
+      <created>1734710618899</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1734710618899</updated>
+    </task>
+    <task id="LOCAL-00018" summary="task 5 (scheduler kind of broken)">
+      <option name="closed" value="true" />
+      <created>1734730154415</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1734730154415</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -107,6 +267,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project structure fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="project structure fixed" />
+    <MESSAGE value="basic project structure" />
+    <MESSAGE value="added CarServiceLab" />
+    <MESSAGE value="reverted some files" />
+    <MESSAGE value="queue interface" />
+    <MESSAGE value="added 3 classes that implements the queue interface" />
+    <MESSAGE value="testing the linearqueue implementation" />
+    <MESSAGE value="circular queue done" />
+    <MESSAGE value="Implemented priority queue, added testObj for testing them according to its attributes." />
+    <MESSAGE value="task 1 done" />
+    <MESSAGE value="task 1 enhanced + interfaces" />
+    <MESSAGE value="added classes with dineable and refuelable interfaces" />
+    <MESSAGE value="small changes to testObj to get new attributes" />
+    <MESSAGE value="task 2" />
+    <MESSAGE value="task 3 done" />
+    <MESSAGE value="refactored class logic" />
+    <MESSAGE value="task 4" />
+    <MESSAGE value="task 5 (scheduler kind of broken)" />
+    <option name="LAST_COMMIT_MESSAGE" value="task 5 (scheduler kind of broken)" />
   </component>
 </project>
