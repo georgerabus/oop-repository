@@ -1,4 +1,7 @@
 import java.io.File;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Arrays;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -9,6 +12,7 @@ public class Scheduler {
     private final String generatorPath;
     private boolean generatorFinished;
     private final ScheduledExecutorService scheduler;
+    private final Set<String> processedFiles;
 
     public Scheduler(Semaphore semaphore, String generatorPath, String folderPath) {
         this.semaphore = semaphore;
@@ -16,12 +20,21 @@ public class Scheduler {
         this.generatorPath = generatorPath;
         this.generatorFinished = false;
         this.scheduler = Executors.newScheduledThreadPool(2);
+        this.processedFiles = new HashSet<>();
     }
 
     public void start() {
         scheduleGeneratorTask();
         scheduleReaderTask();
         addShutdownHook();
+    }
+
+    private synchronized void setGeneratorFinished(boolean value) {
+        this.generatorFinished = value;
+    }
+
+    private synchronized boolean isGeneratorFinished() {
+        return this.generatorFinished;
     }
 
     private void scheduleGeneratorTask() {
@@ -32,15 +45,11 @@ public class Scheduler {
                 processBuilder.inheritIO(); // output python script to the console
                 Process process = processBuilder.start();
                 process.waitFor();
-                synchronized (this) {
-                    generatorFinished = true;
-                }
+                setGeneratorFinished(true);
                 System.out.println("[Generator] Finished generating files.");
             } catch (Exception e) {
                 System.err.println("[Error] Failed to run Python generator: " + e.getMessage());
-                synchronized (this) {
-                    generatorFinished = true;
-                }
+                setGeneratorFinished(true);
             }
         };
         scheduler.schedule(generateTask, 0, TimeUnit.SECONDS);
@@ -51,41 +60,41 @@ public class Scheduler {
             File folder = new File(folderPath);
             File[] files = folder.listFiles((_, name) -> name.endsWith(".json"));
 
-            boolean isGeneratorDone;
-            synchronized (this) {
-                isGeneratorDone = generatorFinished;
+            if (isGeneratorFinished()) {
+                if (files == null || allFilesProcessed(files)) {
+                    System.out.println("[Reader] No new files to process. Stopping reader task.");
+                    scheduler.shutdown();
+                    return;
+                }
             }
 
-            // Check if the generator is finished and no more files are present
-            if (isGeneratorDone && (files == null || files.length == 0)) {
-                System.out.println("[Reader] No more files to process. Stopping reader task.");
-                scheduler.shutdown();
-                return;
-            }
-
-            // Process files if present
             if (files == null || files.length == 0) {
                 System.out.println("[Reader] No new files to process.");
                 return;
             }
 
-            for (File file : files) {
-                // Skip already processed files
-                if (file.getName().endsWith(".processed")) {
-                    continue;
-                }
+            File[] unprocessed = Arrays.stream(files)
+                    .filter(f -> !processedFiles.contains(f.getName()) && isFileReady(f))
+                    .toArray(File[]::new);
 
+            if (unprocessed.length == 0) {
+                return;
+            }
 
-                semaphore.readFiles(folderPath);
+            semaphore.readFiles(folderPath);
+
+            File[] allSemaphoreFiles = semaphore.files;
+            File[] filteredFiles = Arrays.stream(allSemaphoreFiles)
+                    .filter(f -> !processedFiles.contains(f.getName()))
+                    .toArray(File[]::new);
+
+            semaphore.files = filteredFiles;
+
+            if (filteredFiles.length > 0) {
                 semaphore.handleCars();
 
-
-                // Rename the file to mark it as processed
-                File processedFile = new File(file.getParent(), file.getName() + ".processed");
-                if (file.renameTo(processedFile)) {
-                    System.out.println("[Reader] Processed and renamed file: " + file.getName());
-                } else {
-                    System.err.println("[Reader] Failed to rename file: " + file.getName());
+                for (File f : filteredFiles) {
+                    processedFiles.add(f.getName());
                 }
             }
         };
@@ -93,6 +102,18 @@ public class Scheduler {
         scheduler.scheduleAtFixedRate(readTask, 1, 1, TimeUnit.SECONDS);
     }
 
+    private boolean allFilesProcessed(File[] files) {
+        for (File file : files) {
+            if (!processedFiles.contains(file.getName())) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean isFileReady(File file) {
+        return file.length() > 0 && file.lastModified() < System.currentTimeMillis() - 500;
+    }
 
     private void addShutdownHook() {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
@@ -113,8 +134,6 @@ public class Scheduler {
         System.out.println("Total cars refueled with gas: " + GasStation.getCount());
         System.out.println("Total passengers types: People - " + semaphore.getPeoplePassengers() + ", Robots - " + semaphore.getRobotsPassengers());
         System.out.println("Total passengers dine preference: Dining - " + CarStation.getDining() + ", Not Dining - " + CarStation.getNot_dining());
-        System.out.println("Total people served: " + PeopleDinner.getCount());
-        System.out.println("Total robots served: " + RobotsDinner.getCount());
         System.out.println("Total consumption: Electric - " + semaphore.getElectricConsumption() + ", Gas - " + semaphore.getGasConsumption());
     }
 }

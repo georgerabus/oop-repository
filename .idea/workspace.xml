@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="task 4">
-      <change afterPath="$PROJECT_DIR$/lab3/src/main/java/Scheduler.java" afterDir="false" />
+    <list default="true" id="0ac454ee-05f5-44d3-bf2e-160ee066ab3d" name="Changes" comment="task 5 (scheduler kind of broken)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/main/generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab3/src/main/java/Play.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/Play.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/Scheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/Scheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab3/src/main/java/Semaphore.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/Semaphore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -244,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734710618899</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="task 5 (scheduler kind of broken)">
+      <option name="closed" value="true" />
+      <created>1734730154415</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1734730154415</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,6 +283,7 @@
     <MESSAGE value="task 3 done" />
     <MESSAGE value="refactored class logic" />
     <MESSAGE value="task 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="task 4" />
+    <MESSAGE value="task 5 (scheduler kind of broken)" />
+    <option name="LAST_COMMIT_MESSAGE" value="task 5 (scheduler kind of broken)" />
   </component>
 </project>

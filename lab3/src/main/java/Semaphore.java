@@ -4,7 +4,7 @@ import java.nio.file.Files;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Semaphore {
-    private File[] files;
+    public File[] files;
 
     private final CarStation station1;
     private final CarStation station2;
